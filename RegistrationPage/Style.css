@@ -1,0 +1,15 @@
+﻿.image {
+    background-image:url('images/Train.jpg');
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;   
+}
+#abc{
+    color: royalblue;
+    background-color:white;
+    font-style:italic;
+}
+#h2{
+    background-color: blueviolet;
+    font-style:italic;
+}
