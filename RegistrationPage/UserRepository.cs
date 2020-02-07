@@ -26,7 +26,6 @@ namespace OnlineTrainTicketBooking
                 sqlCommand.Parameters.Add(new SqlParameter("@password", user.password));
                 sqlCommand.Parameters.Add(new SqlParameter("@role", user.role));
                 int retRows = sqlCommand.ExecuteNonQuery();
-                
                 sqlCommand.Dispose();
                 sqlConnection.Close();
                 return retRows;
