@@ -21,6 +21,8 @@
                     <asp:Button ID="btnSignInID" runat="server" Text="SignIn" OnClick="GoToLogin" BackColor="aqua" BorderWidth="0" />
                     &nbsp;
                     <asp:Button ID="btnSignUpID" runat="server" Text="SignUp" OnClick="GoToSignUp" BackColor="aqua" BorderWidth="0" />
+                    &nbsp;
+                    <asp:Button ID="btnGrid" runat="server" Text="TrainDetails" OnClick="GoToTrainDetails" BackColor="aqua" BorderWidth="0" />
                     &nbsp;                    
                 </span>
             </div>

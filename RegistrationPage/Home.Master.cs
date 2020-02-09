@@ -21,6 +21,10 @@ namespace OnlineTrainTicketBookingApp
         {
             Response.Redirect("SignUp.aspx");
         }
+        protected void GoToTrainDetails(object sender, EventArgs e)
+        {
+            Response.Redirect("TrainDetails.aspx");
+        }
 
     }
 }

@@ -2,7 +2,7 @@
 
 namespace OnlineTrainTicketBooking
 {
-    class User
+    public class User
     {
         public string firstName { get; set; }       //Properties of user
         public string lastName { get; set; }

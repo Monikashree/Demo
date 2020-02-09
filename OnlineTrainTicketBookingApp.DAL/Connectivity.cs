@@ -1,14 +1,15 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
+using System.Configuration;
 
 namespace OnlineTrainTicketBookingApp.DAL
 {
-    public class Connectivity
+    public static class Connectivity
     {
-        public SqlConnection EstablishConnection()
+        public static SqlConnection EstablishConnection()
         {
-            SqlConnection sqlConnection = new SqlConnection()
-            return 
+            string connection = ConfigurationManager.ConnectionStrings["Sqlconnection"].ConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(connection);
+            return sqlConnection;
         }
     }
 }

@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
-
+using OnlineTrainTicketBookingApp.DAL;
 
 namespace OnlineTrainTicketBooking
 { 
-    class UserRepository
+    public class UserRepository
     {
         //protected static List<User> userList = new List<User>();        //A static user list to store user details 
         //SqlConnection sqlConnection = DBUtils.GetDBConnection();
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source = LENOVO\SQLEXPRESS; Initial Catalog = Railway; User ID = sa; Password = monika123");
-        public int RegisterDetail(User user, SqlConnection sqlConnection)            //Method to make user to register with the account
+        SqlConnection sqlConnection = Connectivity.EstablishConnection();
+        public int RegisterDetail(User user)            //Method to make user to register with the account
         {
             using (SqlCommand sqlCommand = new SqlCommand("USER_ADMIN_Registration", sqlConnection))
             {
@@ -33,7 +32,7 @@ namespace OnlineTrainTicketBooking
             
         }
 
-        internal short VerifyWithDB(string userName, string passWord)
+        public short VerifyWithDB(string userName, string passWord)
         {
 
             using (SqlCommand sqlCommand = new SqlCommand("spCHECKDB", sqlConnection))
