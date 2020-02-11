@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="OnlineTrainTicketBookingApp.SignIn" %>
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head"></asp:Content>
-<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
+<asp:Content ID="cntHead" runat="server" ContentPlaceHolderID="head"></asp:Content>
+<asp:Content ID="cntBody" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
     <h1 id="abc"><marquee>Never Rush & Push for train ticket</marquee></h1>
    <h2 id="h2">SignIn</h2>
     <table align="right">
@@ -15,7 +15,7 @@
         <tr>
             <td>Password</td>
             <td>
-                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" Type="password" runat="server"></asp:TextBox>
             </td>
 
         </tr>        

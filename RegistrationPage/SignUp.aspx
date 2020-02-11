@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="OnlineTrainTicketBookingApp.SignUp" %>
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head"></asp:Content>
-<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
+<asp:Content ID="cntHead" runat="server" ContentPlaceHolderID="head"></asp:Content>
+<asp:Content ID="cntBody" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
     <h1 id="abc">
         <marquee>Sign Up</marquee>
     </h1>

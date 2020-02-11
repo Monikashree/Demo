@@ -13,7 +13,7 @@
 <body class="image">
     <form id="homeID" runat="server">
         <div>
-            <div>
+            <div <%--style="align : margin-left"--%>>
                 <h1 style="text-align: center; background-color: snow; font-style: italic"><marquee>Bon Voyage</marquee></h1>
                 <span style="margin-left: 710px">
                     <asp:Button ID="btnStartID" runat="server" Text="Home" OnClick="GoToHome" BackColor="aqua" BorderWidth="0" />
@@ -22,8 +22,8 @@
                     &nbsp;
                     <asp:Button ID="btnSignUpID" runat="server" Text="SignUp" OnClick="GoToSignUp" BackColor="aqua" BorderWidth="0" />
                     &nbsp;
-                    <asp:Button ID="btnGrid" runat="server" Text="TrainDetails" OnClick="GoToTrainDetails" BackColor="aqua" BorderWidth="0" />
-                    &nbsp;                    
+                    <%--<asp:Button ID="btnGrid" runat="server" Text="TrainDetails" OnClick="GoToTrainDetails" BackColor="aqua" BorderWidth="0" />
+                    &nbsp; --%>                   
                 </span>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>

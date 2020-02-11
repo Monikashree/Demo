@@ -210,7 +210,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="TrainDetails.aspx" />
+    <Content Include="Style.css" />
     <Content Include="Home.aspx" />
     <Content Include="Home.Master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -258,7 +258,7 @@
     <Content Include="Global.asax" />
     <Content Include="SignIn.aspx" />
     <Content Include="SignUp.aspx" />
-    <Content Include="Style.css" />
+    <Content Include="TrainDetailsAdmin.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -408,13 +408,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="TrainDetails.aspx.cs">
-      <DependentUpon>TrainDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TrainDetails.aspx.designer.cs">
-      <DependentUpon>TrainDetails.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -446,6 +439,13 @@
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TrainDetailsAdmin.aspx.cs">
+      <DependentUpon>TrainDetailsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainDetailsAdmin.aspx.designer.cs">
+      <DependentUpon>TrainDetailsAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

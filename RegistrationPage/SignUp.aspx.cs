@@ -1,6 +1,6 @@
 ﻿using OnlineTrainTicketBooking;
 using System;
-using System.Data.SqlClient;
+using OnlineTrainTicketBookingApp.BL;
 
 
 namespace OnlineTrainTicketBookingApp
@@ -12,23 +12,17 @@ namespace OnlineTrainTicketBookingApp
 
         }
         protected void Button_Click(object sender, EventArgs e)
-        {
-            //SqlConnection sqlConnection = new SqlConnection(@"Data Source = LENOVO\SQLEXPRESS; Initial Catalog = Railway; User ID = sa; Password = monika123");
-            UserRepository userRepository = new UserRepository();
-            User user = new User(txtFirstnameID.Text, txtLastnameID.Text, short.Parse(txtAgeID.Text), rbtSex.SelectedItem.ToString(), txtGmailID.Text, long.Parse(txtPhoneID.Text), txtPasswordID.Text, "User");
-            int row = userRepository.RegisterDetail(user);            
-            if (row >= 1)
+        {            
+            User user = new User(txtFirstnameID.Text, txtLastnameID.Text, short.Parse(txtAgeID.Text), rbtSex.SelectedItem.ToString(), txtGmailID.Text, long.Parse(txtPhoneID.Text), txtPasswordID.Text, "User");        
+            int row = PathToDAL.StoreDetails(user);            
+            if (row <= 1)
             {
-                string message = "Your details have been Registered successfully.";
-                string script = "window.onload = function(){ alert('";
-                script += message;
-                script += "')};";
-                ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
-            }
-            else
                 Response.Write("Not Registered Succesfully");
-            
-
+            }         
+             
+            string script = "window.onload = function(){ alert('" + "Your details have been Registered successfully." + "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+            Response.Redirect("SignIn.aspx");
         }
 
         //protected void ServerValidation(object sender, ServerValidateEventArgs args)

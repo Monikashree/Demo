@@ -1,8 +1,10 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="TrainDetails.aspx.cs"
-    Inherits="OnlineTrainTicketBookingApp.TrainDetails" %>
+﻿
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="head"></asp:Content>
-<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
+<%@ Page Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="TrainDetailsAdmin.aspx.cs"
+    Inherits="OnlineTrainTicketBookingApp.TrainDetailsAdmin" %>
+
+<asp:Content ID="cntHead" runat="server" ContentPlaceHolderID="head"></asp:Content>
+<asp:Content ID="cntBody" runat="server" ContentPlaceHolderID="ContentPlaceHolder">
     <link rel="stylesheet" type="text/css" href="Style.css" />
     <div id="Content" style="resize: horizontal">
         <table align="center">
@@ -11,9 +13,9 @@
                     <div>
                         <asp:GridView ID="gdView" runat="server" AutoGenerateColumns="False" ShowFooter="True"
                             DataKeyNames="TrainNo" ShowHeaderWhenEmpty="True" OnRowCommand="gdView_RowCommand"
-                            <%--OnRowUpdating="gdView_RowUpdating" OnRowEditing="gdView_RowEditing"
+                            OnRowUpdating="gdView_RowUpdating" OnRowEditing="gdView_RowEditing"
                             OnRowCancelingEdit="gdView_RowCancelingEdit" OnRowDeleting="gdView_RowDeleting"
-                            OnSelectedIndexChanged="gdView_SelectedIndexChanged"--%>
+                            OnSelectedIndexChanged="gdView_SelectedIndexChanged"
                             BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
                             <FooterStyle BackColor="White" ForeColor="#000066" />
                             <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -149,10 +151,4 @@
             </tr>
         </table>       
     </div>
-</asp:Content>
-
-
-
-
-
-
+   </asp:Content>

@@ -48,26 +48,25 @@ namespace OnlineTrainTicketBooking
                 short ID = Convert.ToInt16(sqlCommand.Parameters["@id"].Value);
                 sqlConnection.Close();
                 return ID;
-
             }
         }
 
-        //internal string FetchRole(int ID)
-        //{
-        //    using (SqlCommand sqlCommand = new SqlCommand("spFETCHROLE", sqlConnection))
-        //    {
-        //        SqlParameter sqlParameter = new SqlParameter();
-        //        sqlCommand.CommandType = CommandType.StoredProcedure;
-        //        sqlCommand.Parameters.AddWithValue("@id", ID);                
-        //        sqlCommand.Parameters.Add("@role", SqlDbType.VarChar, 6);
-        //        sqlCommand.Parameters["@role"].Direction = ParameterDirection.Output;
-        //        sqlConnection.Open();
-        //        sqlCommand.ExecuteNonQuery();
-        //        string role = Convert.ToString(sqlCommand.Parameters["@role"].Value);
-        //        sqlConnection.Close();
-        //        return role;
-        //    }
-        //}
+        public string FetchRole(int ID)
+        {
+            using (SqlCommand sqlCommand = new SqlCommand("spFETCHROLE", sqlConnection))
+            {
+                SqlParameter sqlParameter = new SqlParameter();
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@id", ID);
+                sqlCommand.Parameters.Add("@role", SqlDbType.VarChar, 6);
+                sqlCommand.Parameters["@role"].Direction = ParameterDirection.Output;
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+                string role = Convert.ToString(sqlCommand.Parameters["@role"].Value);
+                sqlConnection.Close();
+                return role;
+            }
+        }
 
 
     }

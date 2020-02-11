@@ -18,7 +18,10 @@
      padding-top: 1em;
      margin: 0 12px 0 180px;
      background-color:White;
-     overflow:scroll;  
+     overflow:scroll; 
+     justify-content:center;
+     margin-left:auto;
+     margin-right:auto;
 }
 table{
      overflow:scroll;
